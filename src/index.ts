@@ -1,8 +1,17 @@
 import { config } from "dotenv";
 import express from "express";
-// PARA PODER ACCEDER A LAS VARIABLES DEL AMBIENTE (.env)
+import studentRouter from "./routes/student";
+
+//Para poder acceder a las variables del ambiente (.env)
 config();
+
 const app = express();
+
+// Middleware para parsear JSON
+app.use(express.json());
+
+app.use("/student", studentRouter);
+
 app.listen(process.env.SERVER_PORT, function () {
-  console.log("Escuchando Puerto " + process.env.SERVER_PORT);
+  console.log("Escuchando puerto " + process.env.SERVER_PORT);
 });
