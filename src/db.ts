@@ -1,8 +1,8 @@
 import mysql from "mysql2/promise";
 import { ConnectionOptions } from "mysql2";
-import dotenv from "dotenv";
+import DotenvFlow from "dotenv-flow";
 
-dotenv.config();
+DotenvFlow.config();
 
 const configOptions: ConnectionOptions = {
   host: process.env.MYSQL_HOST,
