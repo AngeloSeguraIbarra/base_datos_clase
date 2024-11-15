@@ -6,7 +6,7 @@ import {
   getStudents,
   updateStudent,
 } from "../controllers/student";
-import validate from "../middlwares/validate";
+import validate from "../middlewares/validate";
 import { studentSchema } from "../schemas/student";
 
 const router = Router();
